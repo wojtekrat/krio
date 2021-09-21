@@ -19,7 +19,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>-60</x>
+     <x>-70</x>
      <y>-60</y>
      <width>931</width>
      <height>561</height>
@@ -42,35 +42,119 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>loadingscreen.bmp</pixmap>
+    <pixmap>bg.jpg</pixmap>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QProgressBar" name="progressBar">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>350</y>
-     <width>200</width>
-     <height>41</height>
+     <x>150</x>
+     <y>370</y>
+     <width>500</width>
+     <height>26</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-     <weight>50</weight>
-     <bold>false</bold>
-    </font>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar {
+color: rgb(255, 255, 255);
+background-color: rgb(85, 85, 255);
+border-radius: 10px;
+border-style: none;
+text-align: center;
+}
+
+QProgressBar::chunk{
+border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0.516955, y1:0, x2:0.534, y2:1, stop:0.113636 rgba(113, 133, 191, 255), stop:1 rgba(255, 255, 255, 255));
+
+}</string>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="loadingLabel">
+   <property name="geometry">
+    <rect>
+     <x>149</x>
+     <y>400</y>
+     <width>501</width>
+     <height>20</height>
+    </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(85, 85, 255);</string>
+    <string notr="true">background-color: transparent;
+color: rgb(255, 255, 255);
+</string>
    </property>
    <property name="text">
-    <string>START</string>
+    <string>Uruchamianie programu...</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>761</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 5px solid rgb(255, 255, 255);
+background-color: none;
+border-radius: 10px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>761</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:4px solid rgb(85, 85, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>600</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>Clipboard01.png</pixmap>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>
